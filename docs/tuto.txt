@@ -1,0 +1,35 @@
+-redux 패턴 논리흐름 순서
+Test Logic 설명
+1.Test 에서 버튼클릭 handelOnTestBtn 가실행됨
+2.Actions을 리듀서로 보냄,
+3.Reducer가 액션에 따라 스토어의 State를 업데이트 (액션이 실행됨)
+    -리듀서의 형태를 보면 switch case문이다, 액션에 따라 실행이 되는것 
+4.State가 변하므로 Subscribe 하고있는 component가  UI가 리렌더링됨
+
+
+[하나의 Redux 패턴 만든느 순서]
+1.Action Type 정의.
+2.Action Creater 정의
+    -액션을 만드는 함수이다.
+3.reducer 정의 
+    -리듀서란? 리듀서가 state오브젝트를 변경해줄것이다.
+    -State는 Object로 저장되는데 이 Object는 매우 커질수있다. 때문에 Object를 수정하기위해서 엄격한 통제가필요하다.
+    -모든 State를 통칭 Store라고한다.
+
+
+
+
+-------참고
+function greet(lang){
+  switch(lang){
+    case 'spanish':
+      return 'hola';
+    case 'korean':
+      return 'annohaseio';
+    case 'italian':
+      return 'chao';
+  }
+}
+
+[12 Dispatch]
+1.디스패치는 액션을 리듀서로 보내는 function 이다
